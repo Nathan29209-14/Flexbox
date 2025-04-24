@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>grid Basics</title>
+    <link rel="stylesheet" href="css/flexbox.css" />
+  </head>
+  <body>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 100px 300px;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.grid-contaneir {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 80px 100px;
+  grid-gap: 10px;
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+.grid-contaneir > div {
+  background-color: aqua;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 25px;
+}
+
+.grid-container2 {
+  border: 1px solid black;
+  background-color: mintcream;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px;
+}
+
+.grid-container2 div {
+  border: 1px black;
+  background-color: yellow;
+}
+
+.item1 { grid-area: 1 / 1 / 2 / 2; }
+.item2 { grid-area: 1 / 2 / 2 / 3; }
+.item3 { grid-area: 1 / 3 / 2 / 4; }
+.item4 { grid-area: 2 / 1 / 3 / 2; }
+.item5 { grid-area: 2 / 2 / 3 / 3; }
+.item6 { grid-area: 2 / 3 / 3 / 4; }
+
+.grid-container4 {
+  display: grid;
+  grid-auto-rows: 150px;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container4 > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 { grid-area: 1 / 1 / 2 / 2; }
+.item2 { grid-area: 1 / 2 / 2 / 3; }
+.item3 { grid-area: 1 / 3 / 2 / 4; }
+.item4 { grid-area: 2 / 1 / 3 / 2; }
+.item5 { grid-area: 2 / 2 / 3 / 3; }
+.item6 { grid-area: 2 / 3 / 3 / 4; }
+
+.grid-container6 {
+  display: grid;
+  grid-auto-columns: 50px;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container6 > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>The grid-template-rows Property</h1>
+
+<p>Use the <em>grid-template-rows</em> property to define the size of the rows in a grid layout.</p>
+<p>The first row in this grid is 100px high, and the second row is 300px high:</p>
+
+<div class="grid-container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>  
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+</div>
+    <h3>The grid-template-rows Property</h3>
+    <div class="grid-contaneir">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+      <div class="item6">6</div>
+      <div class="item7">7</div>
+      <div class="item8">8</div>
+    </div>
+        <h3>The gap Property</h3>
+    <div class="grid-container2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </div>
+
+    <h1>The grid-auto-rows Property</h1>
+
+<p>Use the <em>grid-auto-rows</em> property to set a default size (height) for all rows.</p>
+<p>Set the size to 150 pixels per row:</p>
+
+<div class="grid-container4">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>  
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+</div>
+
+<p><strong>Note:</strong> The grid-template-rows property overrides this property.</p>
+
+<h1>The grid-auto-columns Property</h1>
+<p>Use the <em>grid-auto-columns</em> property to set a default size (width) for all columns.</p>
+<p>Set the size to 50 pixels per column:</p>
+
+<div class="grid-container6">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>  
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+</div>
+
+<p><strong>Note:</strong> The grid-template-columns property overrides this property.</p>
+
+  </body>
+</html>
